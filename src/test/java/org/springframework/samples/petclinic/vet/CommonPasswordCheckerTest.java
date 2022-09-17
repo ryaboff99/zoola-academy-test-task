@@ -14,13 +14,13 @@ class CommonPasswordCheckerTest {
 
     @DisplayName("Set contain password")
     @ParameterizedTest
-    @MethodSource("common_passwords")
-    void set_contain_password(String password) {
+    @MethodSource("commonPasswords")
+    void seContainPassword(String password) {
         CommonPasswordChecker commonPasswordChecker = new CommonPasswordChecker();
         assertTrue(commonPasswordChecker.checkCommonPassword(password));
     }
 
-    public static List<Arguments> common_passwords() {
+    public static List<Arguments> commonPasswords() {
         return List.of(
           Arguments.of("1234567"),
           Arguments.of("qwerty"),
